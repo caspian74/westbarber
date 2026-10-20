@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>West Barber Shop · Tijuana</title>
+<meta name="description" content="West Barber Shop en Plaza Norte, Tijuana. Cortes clásicos, fades, barba y afeitado con toalla caliente. 4.9★ en Google. Agenda por WhatsApp al 664 848 2494.">
+<meta property="og:title" content="West Barber Shop · Tijuana">
+<meta property="og:description" content="Cortes, fades y barba en Plaza Norte, Tijuana. 4.9★ con 265 reseñas en Google. Se habla inglés.">
+<meta property="og:image" content="assets/local.webp">
+<meta name="theme-color" content="#0b0b0a">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BarberShop","name":"West Barber Shop","telephone":"+52 664 848 2494",
+"address":{"@type":"PostalAddress","streetAddress":"Plaza Norte, Calle 1ra esq. Av. Niños Héroes, Locales 15 y 16","addressLocality":"Tijuana","addressRegion":"B.C.","postalCode":"22000","addressCountry":"MX"},
+"openingHours":"Mo-Su 09:00-22:00","priceRange":"$$","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"265"}}
+</script>
+<style>
+:root{
+  --bg:#0b0b0a; --bg2:#121210; --card:#171613; --line:rgba(212,175,95,.18);
+  --gold:#d4af5f; --gold2:#f3dc9a; --gold3:#9c7a33; --green:#2f9e57; --green2:#1d6b3a; --red:#b3322d;
+  --text:#f4efe4; --muted:#a8a194;
+  --display:'Bebas Neue',Impact,sans-serif; --cond:'Barlow Condensed',sans-serif; --body:'Inter',system-ui,sans-serif;
+  --goldgrad:linear-gradient(100deg,#8a6a2b 0%,#f3dc9a 28%,#d4af5f 45%,#fff3c8 55%,#b38a3e 75%,#f3dc9a 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.gold-text{background:var(--goldgrad);background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+@keyframes shine{to{background-position:220% center}}
+.eyebrow{font-family:var(--cond);font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-size:.85rem;display:flex;align-items:center;gap:.7rem}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--gold)}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,6vw,4.4rem);line-height:.95;letter-spacing:.01em;margin:.6rem 0 1rem}
+.lead{color:var(--muted);max-width:56ch}
+section{padding:110px 0;position:relative}
+.btn{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--cond);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:1rem;padding:.95rem 1.6rem;border-radius:2px;transition:transform .25s,box-shadow .25s,background .25s;cursor:pointer;border:0}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-gold{background:var(--goldgrad);background-size:200% auto;color:#16120a;box-shadow:0 8px 30px -10px rgba(212,175,95,.6)}
+.btn-gold:hover{transform:translateY(-2px);background-position:100% center;box-shadow:0 14px 40px -10px rgba(212,175,95,.8)}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold2)}
+.btn-ghost:hover{background:rgba(212,175,95,.1);transform:translateY(-2px)}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:#36b764;transform:translateY(-2px)}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .35s,border-color .35s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(11,11,10,.88);backdrop-filter:blur(12px);border-color:var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:76px;gap:1rem}
+.brand{display:flex;align-items:center;gap:.7rem}
+.brand img{width:52px;height:52px}
+.brand span{font-family:var(--display);font-size:1.5rem;letter-spacing:.08em}
+.links{display:flex;gap:1.8rem;font-family:var(--cond);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.92rem}
+.links a{position:relative;color:#d9d2c3}
+.links a::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--gold);transition:width .3s}
+.links a:hover::after{width:100%}
+.nav-r{display:flex;align-items:center;gap:.8rem}
+.lang{display:flex;border:1px solid var(--line);border-radius:2px;overflow:hidden;font-family:var(--cond);font-weight:700;font-size:.85rem}
+.lang button{background:none;border:0;color:var(--muted);padding:.4rem .65rem;cursor:pointer;letter-spacing:.1em}
+.lang button.on{background:var(--gold);color:#16120a}
+.nav-r .btn{padding:.6rem 1.1rem;font-size:.9rem}
+.burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--gold2);margin:6px 8px;transition:.3s}
+
+/* HERO */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url(assets/local.webp) center/cover;transform:scale(1.1);filter:grayscale(.35) brightness(.55);animation:kenburns 22s ease-in-out infinite alternate}
+@keyframes kenburns{to{transform:scale(1.22) translate(-2%,-2%)}}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(11,11,10,.55),rgba(11,11,10,.92) 70%),linear-gradient(to top,var(--bg),transparent 40%)}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.25fr .75fr;gap:3rem;align-items:center}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(3.6rem,9.5vw,8.2rem);line-height:.86;letter-spacing:.005em;margin:1.2rem 0 1.4rem}
+.hero h1 em{font-style:normal;color:var(--green);display:block;font-family:var(--cond);font-weight:700;font-style:italic;font-size:.55em;letter-spacing:.02em;line-height:1.05;text-transform:uppercase;transform:skewX(-6deg);transform-origin:left}
+.hero p.lead{font-size:1.1rem;color:#cfc8b8}
+.cta-row{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2rem}
+.rating-chip{display:inline-flex;align-items:center;gap:.8rem;margin-top:2.2rem;padding:.7rem 1.1rem;border:1px solid var(--line);background:rgba(18,18,16,.7);backdrop-filter:blur(6px)}
+.stars{color:var(--gold);letter-spacing:.12em}
+.rating-chip b{font-family:var(--display);font-size:1.7rem;font-weight:400;line-height:1}
+.rating-chip small{color:var(--muted);font-size:.82rem}
+.hero-logo{position:relative;justify-self:center}
+.hero-logo img{width:min(400px,80vw);filter:drop-shadow(0 20px 60px rgba(212,175,95,.35));animation:float 6s ease-in-out infinite}
+.hero-logo::before{content:"";position:absolute;inset:8%;border-radius:50%;border:1px dashed rgba(212,175,95,.35);animation:spin 40s linear infinite}
+@keyframes float{50%{transform:translateY(-14px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.scroll-cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;font-family:var(--cond);letter-spacing:.3em;font-size:.75rem;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:.5rem}
+.scroll-cue i{width:1px;height:42px;background:linear-gradient(var(--gold),transparent);animation:cue 2s infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* barber pole stripe */
+.pole-stripe{height:10px;background:repeating-linear-gradient(-45deg,var(--red) 0 14px,#f4efe4 14px 28px,#1f4fa0 28px 42px,#f4efe4 42px 56px);background-size:79px 10px;animation:pole 2.4s linear infinite}
+@keyframes pole{to{background-position:79px 0}}
+
+/* MARQUEE */
+.marquee{border-block:1px solid var(--line);background:var(--bg2);overflow:hidden;padding:1.05rem 0}
+.marquee-track{display:flex;gap:3rem;width:max-content;animation:mq 38s linear infinite;font-family:var(--cond);font-weight:600;text-transform:uppercase;letter-spacing:.2em;font-size:1.05rem;white-space:nowrap}
+.marquee-track span{display:flex;align-items:center;gap:3rem;color:#d9d2c3}
+.marquee-track span::after{content:"✦";color:var(--gold)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ABOUT */
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.about-img{position:relative}
+.about-img img{width:100%;aspect-ratio:4/3.4;object-fit:cover;filter:grayscale(.2) contrast(1.05)}
+.about-img::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border:1px solid var(--gold);z-index:-1}
+.badge-float{position:absolute;right:-18px;bottom:-22px;background:var(--bg);border:1px solid var(--gold);padding:1rem 1.3rem;text-align:center}
+.badge-float b{font-family:var(--display);font-weight:400;font-size:2.6rem;line-height:1;display:block}
+.badge-float small{font-family:var(--cond);letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-size:.75rem}
+.feats{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:2rem}
+.feat{border-left:2px solid var(--gold);padding:.3rem 0 .3rem 1rem}
+.feat h4{font-family:var(--cond);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:1.1rem}
+.feat p{color:var(--muted);font-size:.9rem}
+
+/* SERVICES */
+.services{background:var(--bg2)}
+.svc-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap;margin-bottom:3rem}
+.cur{display:flex;border:1px solid var(--line);font-family:var(--cond);font-weight:700}
+.cur button{background:none;border:0;color:var(--muted);padding:.6rem 1.1rem;cursor:pointer;letter-spacing:.14em;font-size:.95rem}
+.cur button.on{background:var(--gold);color:#16120a}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 4rem}
+.svc{display:flex;align-items:baseline;gap:.8rem;padding:1.15rem 0;border-bottom:1px solid var(--line);transition:padding .3s}
+.svc:hover{padding-left:.6rem}
+.svc:hover .svc-name{color:var(--gold2)}
+.svc-name{font-family:var(--cond);font-weight:700;font-size:1.3rem;letter-spacing:.05em;text-transform:uppercase;transition:color .3s}
+.svc-name small{display:block;font-family:var(--body);font-weight:400;text-transform:none;letter-spacing:0;font-size:.82rem;color:var(--muted)}
+.svc-dots{flex:1;border-bottom:1px dotted rgba(212,175,95,.4);transform:translateY(-6px)}
+.svc-price{font-family:var(--display);font-size:1.9rem;line-height:1;color:var(--gold2);white-space:nowrap}
+.svc-price small{font-family:var(--cond);font-size:.8rem;color:var(--muted);letter-spacing:.1em;margin-left:.2rem}
+.svc-tag{font-family:var(--cond);font-size:.7rem;letter-spacing:.14em;background:var(--green);color:#fff;padding:.12rem .45rem;margin-left:.6rem;vertical-align:middle}
+.svc-note{margin-top:2rem;color:var(--muted);font-size:.9rem;display:flex;gap:.6rem;align-items:center}
+
+/* PROMO */
+.promo{overflow:hidden}
+.promo-card{position:relative;display:grid;grid-template-columns:1.1fr .9fr;border:1px solid var(--line);background:linear-gradient(135deg,#15140f,#0d0d0b);overflow:hidden}
+.promo-card::before,.promo-card::after{content:"";position:absolute;width:220px;height:26px;transform:rotate(-45deg);background:linear-gradient(to bottom,var(--green2) 0 33%,#f4efe4 33% 66%,var(--red) 66%);opacity:.75}
+.promo-card::before{top:28px;left:-58px}
+.promo-card::after{bottom:28px;right:-58px}
+.promo-l{padding:3.5rem}
+.day-tag{display:inline-block;font-family:var(--display);font-size:1.6rem;letter-spacing:.06em;background:var(--goldgrad);color:#16120a;padding:.25rem 1rem;margin:.8rem 0 1.2rem}
+.rate{font-family:var(--display);font-size:clamp(3.4rem,8vw,6.2rem);line-height:.9;display:flex;align-items:center;gap:.4em;flex-wrap:wrap}
+.rate .eq{color:var(--green);font-size:.7em}
+.calc{margin-top:2rem;display:flex;gap:.8rem;align-items:center;flex-wrap:wrap;font-family:var(--cond);font-size:1.1rem}
+.calc input{width:120px;background:#0b0b0a;border:1px solid var(--gold3);color:var(--text);font-family:var(--display);font-size:1.6rem;padding:.35rem .7rem;outline:none}
+.calc input:focus{border-color:var(--gold2)}
+.calc output{font-family:var(--display);font-size:1.9rem;color:var(--gold2)}
+.promo-r{padding:3rem;border-left:1px solid var(--line);background:rgba(0,0,0,.25)}
+.promo-r h3{font-family:var(--cond);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.terms{list-style:none;counter-reset:t;display:grid;gap:.7rem}
+.terms li{counter-increment:t;display:flex;gap:.8rem;font-size:.9rem;color:#cfc8b8}
+.terms li::before{content:counter(t);flex:none;width:24px;height:24px;border-radius:50%;background:var(--goldgrad);color:#16120a;font-family:var(--cond);font-weight:700;display:grid;place-items:center;font-size:.85rem}
+
+/* LOYALTY */
+.loyalty{background:radial-gradient(ellipse at 80% 20%,rgba(47,158,87,.14),transparent 55%),var(--bg2)}
+.loyalty .wrap{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.loyal-h{font-family:var(--display);font-size:clamp(2.8rem,6.5vw,5rem);line-height:.9;margin:.6rem 0 1.2rem}
+.loyal-h .g{color:var(--green);font-family:var(--cond);font-weight:700;font-style:italic;text-transform:uppercase;display:block;font-size:.85em}
+.punch{background:linear-gradient(150deg,#16301f,#0e1f15);border:1px solid rgba(212,175,95,.4);border-radius:14px;padding:2rem;box-shadow:0 30px 80px -30px rgba(0,0,0,.8);transform:perspective(900px) rotateY(-6deg) rotateX(3deg);transition:transform .6s}
+.punch:hover{transform:none}
+.punch h3{font-family:var(--cond);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold2);text-align:center;font-size:1.25rem}
+.punch .sub{text-align:center;color:#7fcf9a;font-family:var(--cond);letter-spacing:.12em;text-transform:uppercase;font-size:.9rem}
+.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:1.6rem 0}
+.slot{aspect-ratio:1;border-radius:50%;border:2px solid rgba(212,175,95,.55);display:grid;place-items:center;position:relative;cursor:pointer;transition:background .3s,transform .3s;background:rgba(0,0,0,.25)}
+.slot:hover{transform:scale(1.06)}
+.slot svg{width:42%;opacity:.25;transition:opacity .3s,transform .4s}
+.slot.on{background:radial-gradient(circle,rgba(212,175,95,.35),rgba(212,175,95,.08))}
+.slot.on svg{opacity:1;animation:stamp .45s cubic-bezier(.3,1.6,.5,1)}
+@keyframes stamp{0%{transform:scale(2) rotate(-20deg);opacity:0}100%{transform:none;opacity:1}}
+.slot.free{border-color:var(--green);color:#9be0b2;font-family:var(--cond);font-weight:700;text-align:center;line-height:1.05;font-size:clamp(.7rem,1.6vw,.95rem);letter-spacing:.06em}
+.slot.free.on{background:var(--green);color:#fff;animation:pulse 1.4s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 10px rgba(47,158,87,0)}0%{box-shadow:0 0 0 0 rgba(47,158,87,.6)}}
+.punch-foot{text-align:center;font-family:var(--cond);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold2)}
+.punch-hint{text-align:center;color:var(--muted);font-size:.78rem;margin-top:.4rem}
+.clauses{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,auto);grid-auto-flow:column;gap:.6rem 1.6rem;margin:1.6rem 0}
+.clauses div{display:flex;gap:.6rem;font-size:.95rem}
+.clauses b{font-family:var(--cond);color:var(--gold);font-size:1.05rem}
+.warn{display:flex;gap:1rem;align-items:center;background:#ece6d6;color:#141410;padding:1rem 1.3rem;clip-path:polygon(1% 0,100% 4%,99% 100%,0 94%)}
+.warn svg{width:40px;height:40px;flex:none;color:var(--green2)}
+.warn strong{font-family:var(--display);font-weight:400;font-size:1.6rem;line-height:1;display:block}
+.warn span{font-family:var(--cond);font-weight:700;font-style:italic;color:var(--green2);text-transform:uppercase;font-size:1.3rem}
+.valid{margin-top:1.2rem;font-family:var(--cond);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-size:.9rem}
+.valid b{color:var(--gold2)}
+
+/* REVIEWS */
+.rev-top{display:grid;grid-template-columns:.8fr 1.2fr;gap:4rem;align-items:center;margin-bottom:3.5rem}
+.score{display:flex;gap:2rem;align-items:center}
+.score-big{font-family:var(--display);font-size:7rem;line-height:.85}
+.score-big + div .stars{font-size:1.3rem}
+.bars{display:grid;gap:.45rem}
+.bar{display:grid;grid-template-columns:14px 1fr;gap:.8rem;align-items:center;font-family:var(--cond);color:var(--muted)}
+.bar i{height:8px;background:#26241f;border-radius:4px;overflow:hidden;display:block}
+.bar i::after{content:"";display:block;height:100%;width:var(--w);background:var(--goldgrad);transform:scaleX(0);transform-origin:left;transition:transform 1.4s cubic-bezier(.2,.8,.2,1)}
+.in .bar i::after{transform:scaleX(1)}
+.quotes{display:flex;flex-wrap:wrap;gap:.7rem}
+.quotes span{border:1px solid var(--line);padding:.5rem .9rem;font-size:.9rem;color:#cfc8b8;background:var(--bg2)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.rev{background:var(--card);border:1px solid var(--line);padding:1.8rem;position:relative;transition:transform .35s,border-color .35s}
+.rev:hover{transform:translateY(-6px);border-color:rgba(212,175,95,.5)}
+.rev::before{content:"“";position:absolute;top:-.1rem;right:1.2rem;font-family:Georgia,serif;font-size:5rem;color:rgba(212,175,95,.18);line-height:1}
+.rev-who{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem}
+.av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-size:1.3rem;color:#16120a;background:var(--goldgrad)}
+.rev-who b{display:block;font-family:var(--cond);font-size:1.1rem;letter-spacing:.04em}
+.rev-who small{color:var(--muted);font-size:.78rem}
+.rev p{color:#d9d2c3;font-size:.95rem}
+.rev .stars{font-size:.9rem;margin-bottom:.6rem}
+.g-link{margin-top:2.4rem;display:flex;justify-content:center}
+
+/* BOOK */
+.book{background:linear-gradient(rgba(11,11,10,.9),rgba(11,11,10,.95)),url(assets/local.webp) center/cover fixed}
+.book .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:4rem;align-items:start}
+.contact-list{display:grid;gap:1rem;margin-top:2rem}
+.contact-list>*{display:flex;gap:1rem;align-items:center;padding:1rem 1.2rem;border:1px solid var(--line);background:rgba(18,18,16,.8);transition:border-color .3s}
+.contact-list>a:hover{border-color:var(--gold)}
+.contact-list svg{width:24px;height:24px;color:var(--gold);flex:none}
+.contact-list b{font-family:var(--cond);font-size:1.2rem;letter-spacing:.05em;display:block}
+.contact-list small{color:var(--muted)}
+form{background:var(--card);border:1px solid var(--line);padding:2.4rem;display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+form h3{grid-column:1/-1;font-family:var(--display);font-weight:400;font-size:2.2rem;line-height:1}
+.field{display:grid;gap:.35rem}
+.field.full{grid-column:1/-1}
+label{font-family:var(--cond);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem;color:var(--gold)}
+input,select,textarea{width:100%;background:#0b0b0a;border:1px solid #2c2a24;color:var(--text);font:inherit;padding:.8rem .9rem;outline:none;transition:border-color .25s;border-radius:0}
+input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--gold) 50%),linear-gradient(135deg,var(--gold) 50%,transparent 50%);background-position:calc(100% - 18px) 55%,calc(100% - 13px) 55%;background-size:5px 5px;background-repeat:no-repeat}
+input[type=date]::-webkit-calendar-picker-indicator,input[type=time]::-webkit-calendar-picker-indicator{filter:invert(.75) sepia(1) saturate(3)}
+form .btn{grid-column:1/-1;justify-content:center;margin-top:.4rem}
+.form-note{grid-column:1/-1;color:var(--muted);font-size:.8rem;text-align:center}
+
+/* LOCATION */
+.loc .wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:0;border:1px solid var(--line)}
+.map{position:relative;min-height:460px;background:#1a1916}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) invert(.92) contrast(.9) sepia(.25) hue-rotate(5deg)}
+.map:hover iframe{filter:none}
+.map-pin{position:absolute;left:16px;top:16px;z-index:2;background:var(--bg);border:1px solid var(--gold);padding:.5rem .8rem;font-family:var(--cond);letter-spacing:.12em;font-size:.8rem;text-transform:uppercase;pointer-events:none}
+.loc-info{padding:2.4rem;background:var(--card)}
+.status{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--cond);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.9rem;padding:.35rem .8rem;border:1px solid}
+.status i{width:9px;height:9px;border-radius:50%;background:currentColor;animation:blink 1.6s infinite}
+.status.open{color:#54d17f}.status.closed{color:#e0675f}
+@keyframes blink{50%{opacity:.3}}
+.loc-info h3{font-family:var(--display);font-weight:400;font-size:2rem;margin:1rem 0 .4rem}
+.loc-info address{font-style:normal;color:#cfc8b8;margin-bottom:1.4rem}
+.hours{width:100%;border-collapse:collapse;font-size:.92rem;margin-bottom:1.6rem}
+.hours td{padding:.45rem 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;color:var(--gold2);font-family:var(--cond);font-size:1.05rem;letter-spacing:.04em}
+.hours tr.today td{color:var(--text);font-weight:600}
+.hours tr.today td:first-child::before{content:"▸ ";color:var(--gold)}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.4rem}
+.tags span{font-size:.78rem;border:1px solid var(--line);padding:.25rem .6rem;color:var(--muted)}
+
+/* FOOTER */
+footer{padding:60px 0 30px;border-top:1px solid var(--line);text-align:center}
+footer img{width:110px;margin:0 auto 1rem}
+footer .thanks{font-family:var(--cond);letter-spacing:.24em;text-transform:uppercase;color:var(--gold2)}
+footer .thanks + p{font-family:var(--cond);letter-spacing:.24em;text-transform:uppercase;color:var(--green);font-size:.9rem}
+.foot-bot{margin-top:2.4rem;color:var(--muted);font-size:.8rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem}
+.foot-bot a{color:var(--gold)}
+
+/* FLOAT WA */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px -6px rgba(37,211,102,.6);transition:transform .3s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:32px;height:32px;color:#fff}
+.wa-float::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:ring 2.2s infinite}
+@keyframes ring{to{transform:scale(1.6);opacity:0}}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}
+.hero .rv{transition-duration:1.1s}
+.split span{display:inline-block;opacity:0;transform:translateY(60%) rotate(4deg);animation:up .9s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes up{to{opacity:1;transform:none}}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.split span{opacity:1;transform:none}}
+
+/* RESPONSIVE */
+@media (max-width:960px){
+  .links{position:fixed;inset:76px 0 auto 0;flex-direction:column;background:rgba(11,11,10,.97);padding:1.5rem 16px 2rem;gap:1.2rem;transform:translateY(-120%);transition:transform .4s;border-bottom:1px solid var(--line)}
+  .links.open{transform:none}
+  .burger{display:block}
+  .nav-r .btn{display:none}
+  .hero .wrap,.about .wrap,.loyalty .wrap,.book .wrap,.rev-top,.loc .wrap,.promo-card{grid-template-columns:1fr}
+  .hero-logo{order:-1}.hero-logo img{width:min(230px,60vw)}
+  .hero{padding-top:100px}
+  .svc-grid{grid-template-columns:1fr}
+  .rev-grid{grid-template-columns:1fr}
+  .promo-r{border-left:0;border-top:1px solid var(--line)}
+  .map{min-height:340px}
+  section{padding:80px 0}
+  .badge-float{right:8px}
+  .scroll-cue{display:none}
+}
+@media (max-width:560px){
+  .promo-l,.promo-r,.loc-info{padding:1.8rem}
+  form{grid-template-columns:1fr;padding:1.6rem}
+  .feats,.clauses{grid-template-columns:1fr}
+  .clauses{grid-auto-flow:row;grid-template-rows:none}
+  .score{flex-direction:column;align-items:flex-start;gap:1rem}
+  .brand span{display:none}
+  .punch{padding:1.3rem;transform:none}
+  .slots{gap:.6rem}
+  .book{background-attachment:scroll}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="#inicio" class="brand"><img src="assets/logo.webp" alt="West Barber Shop"><span>WEST</span></a>
+    <div class="links" id="links">
+      <a href="#nosotros" data-en="About">Nosotros</a>
+      <a href="#servicios" data-en="Services">Servicios</a>
+      <a href="#promos" data-en="Promos">Promos</a>
+      <a href="#resenas" data-en="Reviews">Reseñas</a>
+      <a href="#ubicacion" data-en="Location">Ubicación</a>
+    </div>
+    <div class="nav-r">
+      <div class="lang" role="group" aria-label="Idioma"><button class="on" data-lang="es">ES</button><button data-lang="en">EN</button></div>
+      <a href="#agendar" class="btn btn-gold" data-en="Book now">Agendar</a>
+      <button class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow rv in" data-en="Barber Shop · Tijuana, B.C.">Barber Shop · Tijuana, B.C.</div>
+      <h1 class="split" id="h1"><span data-en="PRECISION">PRECISIÓN</span> <span data-en="IN">EN</span> <span data-en="EVERY">CADA</span> <span data-en="CUT.">CORTE.</span>
+        <em><span data-en="Steps from the border">A un paso de la línea</span></em></h1>
+      <p class="lead rv d2" data-en="Classic cuts, skin fades, beard and hot towel shave at Plaza Norte. Clean shop, great vibe and barbers who speak English. Walk-ins welcome.">Cortes clásicos, desvanecidos, barba y afeitado con toalla caliente en Plaza Norte. Barbería impecable, buen ambiente y barberos que hablan inglés. Sin cita también te atendemos.</p>
+      <div class="cta-row rv d3">
+        <a class="btn btn-gold" href="#agendar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span data-en="Book appointment">Agendar cita</span></a>
+        <a class="btn btn-ghost" href="tel:+526648482494"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>664 848 2494</a>
+      </div>
+      <a class="rating-chip rv d3" href="#resenas">
+        <b class="count" data-to="4.9" data-dec="1">0.0</b>
+        <div><div class="stars">★★★★★</div><small><span class="count" data-to="265">0</span> <span data-en="Google reviews">reseñas en Google</span></small></div>
+      </a>
+    </div>
+    <div class="hero-logo rv d2"><img src="assets/logo.webp" alt="Logo West Barber Shop"></div>
+  </div>
+  <div class="scroll-cue"><span>SCROLL</span><i></i></div>
+</header>
+
+<div class="pole-stripe"></div>
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="mq">
+  <span data-en="Walk-ins welcome">Sin cita te atendemos</span>
+  <span data-en="We speak English">Se habla inglés</span>
+  <span data-en="Mon–Sun 9AM – 10PM">Lun–Dom 9AM – 10PM</span>
+  <span data-en="Wednesdays $1 USD = $20 MXN">Miércoles $1 USD = $20 MXN</span>
+  <span data-en="7th haircut free">7mo corte gratis</span>
+  <span data-en="Suavecito products sold here">Productos Suavecito de venta aquí</span>
+</div></div>
+
+<!-- ABOUT -->
+<section class="about" id="nosotros">
+  <div class="wrap">
+    <div class="about-img rv">
+      <img src="assets/local.webp" alt="Fachada de West Barber Shop en Plaza Norte, Tijuana" loading="lazy">
+      <div class="badge-float"><b class="gold-text">2</b><small data-en="Locals · 15 &amp; 16">Locales · 15 y 16</small></div>
+    </div>
+    <div>
+      <div class="eyebrow rv" data-en="The shop">La barbería</div>
+      <h2 class="rv d1"><span data-en="Old-school craft,">Oficio de la vieja escuela,</span> <span class="gold-text" data-en="new-school style.">estilo de hoy.</span></h2>
+      <p class="lead rv d2" data-en="West Barber Shop is the spot in Plaza Norte where Tijuana and San Diego meet in the chair. Attention to detail, hygiene and a family vibe — clients cross the border just to get their cut here.">West Barber Shop es el lugar en Plaza Norte donde Tijuana y San Diego se encuentran en la silla. Atención al detalle, higiene y ambiente familiar: hay clientes que cruzan la frontera solo para cortarse aquí.</p>
+      <div class="feats">
+        <div class="feat rv d1"><h4 data-en="Spotless">Higiene 100%</h4><p data-en="A clean, well-kept shop, every day.">Barbería limpia y bien cuidada, todos los días.</p></div>
+        <div class="feat rv d2"><h4 data-en="Bilingual">Bilingüe</h4><p data-en="Barbers who speak English.">Barberos que hablan inglés.</p></div>
+        <div class="feat rv d1"><h4 data-en="Fast service">Atención rápida</h4><p data-en="Walk in or book ahead.">Llega sin cita o agenda antes.</p></div>
+        <div class="feat rv d2"><h4 data-en="Pay in USD">Pago en dólares</h4><p data-en="Prices in USD and MXN.">Precios en USD y MXN.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="servicios">
+  <div class="wrap">
+    <div class="svc-head">
+      <div>
+        <div class="eyebrow rv" data-en="Services · Servicios">Servicios · Services</div>
+        <h2 class="rv d1" data-en="The menu">El menú</h2>
+      </div>
+      <div class="cur rv d2" role="group" aria-label="Moneda"><button class="on" data-cur="mxn">MXN</button><button data-cur="usd">USD</button></div>
+    </div>
+    <div class="svc-grid" id="svcGrid"></div>
+    <p class="svc-note rv"><span style="color:var(--gold)">✦</span><span data-en="Custom designs priced on consultation. Ask in the shop or by WhatsApp.">Los diseños se cotizan al momento. Pregunta en la barbería o por WhatsApp.</span></p>
+  </div>
+</section>
+
+<!-- PROMO -->
+<section class="promo" id="promos">
+  <div class="wrap">
+    <div class="promo-card rv">
+      <div class="promo-l">
+        <div class="eyebrow" data-en="Wednesday promo">Promo de miércoles</div>
+        <h2 style="font-size:clamp(2rem,4.4vw,3.2rem)"><span data-en="The best exchange rate for your">El mejor tipo de cambio para tus</span> <span class="gold-text" data-en="dollars!">dólares!</span></h2>
+        <div class="day-tag" data-en="EVERY WEDNESDAY">TODOS LOS MIÉRCOLES</div>
+        <div class="rate"><span class="gold-text">$1 USD</span><span class="eq">=</span><span class="gold-text">$20 MXN</span></div>
+        <div class="calc">
+          <label for="usd" style="font-size:.95rem" data-en="Your dollars">Tus dólares</label>
+          <input id="usd" type="number" min="0" value="13" inputmode="decimal">
+          <span>→</span><output id="mxn">$260 MXN</output>
+        </div>
+      </div>
+      <div class="promo-r">
+        <h3 data-en="Promo terms">Términos de la promoción</h3>
+        <ol class="terms">
+          <li data-en="Valid on services only (cuts, beard, etc.), not on product sales.">Válida exclusivamente en servicios (cortes, barba, etc.), no en venta de productos.</li>
+          <li data-en="Applies only to the total of the haircut service.">Aplica únicamente al monto total del servicio de corte de cabello.</li>
+          <li data-en="Cannot be combined with other offers or discounts.">No acumulable con otras ofertas o descuentos.</li>
+          <li data-en="Valid during store hours only.">Válida únicamente en horario de tienda.</li>
+          <li data-en="Card payments are charged in advance.">Pago con tarjeta: cobro anticipado.</li>
+          <li data-en="West Barber Shop reserves the right to verify bill authenticity.">West Barber Shop se reserva el derecho de verificar la autenticidad de los billetes.</li>
+          <li data-en="Subject to change without notice due to market or company policy.">Sujeto a cambios sin previo aviso por motivo del mercado o política de la empresa.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOYALTY -->
+<section class="loyalty" id="lealtad">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow rv" data-en="Loyalty program">Programa de lealtad</div>
+      <h3 class="loyal-h rv d1"><span data-en="Your loyalty">Tu lealtad</span> <span class="g" data-en="has a reward">tiene recompensa</span></h3>
+      <p class="lead rv d2" data-en="One point per visit. Collect six and your 7th haircut is on us. Don't forget to get your visit point — they can't be recovered.">Un punto por visita. Junta seis y tu 7mo corte va por nuestra cuenta. Recuerden tomar su punto de visita: no se podrán recuperar.</p>
+      <div class="clauses rv d2">
+        <div><b>1</b><span data-en="One point per visit">Un punto por visita</span></div>
+        <div><b>2</b><span data-en="Card non-transferable">Tarjeta intransferible</span></div>
+        <div><b>3</b><span data-en="Standard haircuts only">Válido para cortes estándar</span></div>
+        <div><b>4</b><span data-en="Expires in 6 months">Vence en 6 meses</span></div>
+        <div><b>5</b><span data-en="Non-cumulative">No acumulable</span></div>
+        <div><b>6</b><span data-en="7th haircut free">El 7º corte gratis</span></div>
+        <div><b>7</b><span data-en="Valid at the shop only">Válido solo en sucursal</span></div>
+      </div>
+      <div class="warn rv d3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M12 3 2 21h20L12 3z"/><path d="M12 10v5M12 18h.01"/></svg>
+        <div><strong data-en="Points can't be">Los puntos no se podrán</strong><span data-en="recovered">recuperar</span></div>
+      </div>
+      <p class="valid rv"><span data-en="Valid from">Vigente de</span> <b data-en="July 2026">julio 2026</b> <span data-en="to">a</span> <b data-en="December 2026">diciembre 2026</b></p>
+    </div>
+    <div class="rv d2">
+      <div class="punch" id="punch">
+        <h3 data-en="Your loyalty has a reward">Tu lealtad tiene recompensa</h3>
+        <p class="sub" data-en="Tap to stamp your visits">Toca para sellar tus visitas</p>
+        <div class="slots" id="slots"></div>
+        <div class="punch-foot" data-en="7th haircut free">7mo corte gratis</div>
+        <p class="punch-hint" data-en="Demo card · ask for yours at the shop">Tarjeta demostrativa · pide la tuya en la barbería</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="resenas">
+  <div class="wrap">
+    <div class="rev-top">
+      <div>
+        <div class="eyebrow rv" data-en="Google reviews">Reseñas de Google</div>
+        <h2 class="rv d1" data-en="What clients say">Lo que dicen los clientes</h2>
+        <div class="score rv d2" id="score">
+          <div class="score-big gold-text">4.9</div>
+          <div><div class="stars">★★★★★</div><div style="color:var(--muted)"><span data-en="265 reviews">265 reseñas</span></div></div>
+        </div>
+      </div>
+      <div class="rv d2">
+        <div class="bars" id="bars">
+          <div class="bar">5<i style="--w:94%"></i></div>
+          <div class="bar">4<i style="--w:5%"></i></div>
+          <div class="bar">3<i style="--w:1%"></i></div>
+          <div class="bar">2<i style="--w:.5%"></i></div>
+          <div class="bar">1<i style="--w:1%"></i></div>
+        </div>
+        <div class="quotes" style="margin-top:1.6rem">
+          <span data-en="&quot;Great service and they attend you quickly&quot;">“Dan buen servicio y te atienden rápido”</span>
+          <span data-en="&quot;They never leave you without a haircut&quot;">“No te dejan sin corte de pelo”</span>
+          <span data-en="&quot;The dedication and love they put in their work&quot;">“La dedicación y el amor con el que trabajan”</span>
+        </div>
+      </div>
+    </div>
+    <div class="rev-grid">
+      <article class="rev rv">
+        <div class="rev-who"><div class="av">R</div><div><b>Roger Dodger</b><small>Local Guide · <span data-en="a month ago">hace un mes</span></small></div></div>
+        <div class="stars">★★★★★</div>
+        <p>“I had a great experience here. Mario &amp; the staff are super friendly and pay close attention to detail. The shop is exceptionally clean and well maintained. I will definitely be coming back!”</p>
+      </article>
+      <article class="rev rv d1">
+        <div class="rev-who"><div class="av">S</div><div><b>Sebastian Andrade</b><small data-en="4 months ago">hace 4 meses</small></div></div>
+        <div class="stars">★★★★★</div>
+        <p>“The ambiance is nice and the barbers are kind. Some of the barbers speak English, so that's a plus. I've been coming here with my dad for some years. I think it's worth crossing over from SD to TJ.”</p>
+      </article>
+      <article class="rev rv d2">
+        <div class="rev-who"><div class="av">V</div><div><b>Van Ramirez</b><small>Local Guide · <span data-en="9 months ago">hace 9 meses</span></small></div></div>
+        <div class="stars">★★★★★</div>
+        <p>“I came as a walk in. The people here are very nice and took care of me. Haircut, beard cut and wellness treatment. One of the best haircuts I have ever gotten. Well worth it!”</p>
+      </article>
+    </div>
+    <div class="g-link rv"><a class="btn btn-ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=West+Barbershop+Plaza+Norte+Tijuana"><span data-en="See all reviews on Google">Ver todas las reseñas en Google</span> →</a></div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section class="book" id="agendar">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow rv" data-en="Appointments">Citas</div>
+      <h2 class="rv d1"><span data-en="Book your">Agenda tu</span> <span class="gold-text" data-en="chair">silla</span></h2>
+      <p class="lead rv d2" data-en="Fill in the form and we'll open WhatsApp with your request ready to send. Prefer to talk? Call us.">Llena el formulario y abrimos WhatsApp con tu solicitud lista para enviar. ¿Prefieres hablar? Llámanos.</p>
+      <div class="contact-list">
+        <a class="rv d1" href="tel:+526648482494"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><div><b>664 848 2494</b><small data-en="Call the shop">Llamar a la barbería</small></div></a>
+        <a class="rv d2" target="_blank" rel="noopener" href="https://wa.me/526648482494"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.4zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm8.4-18.2A11.8 11.8 0 0 0 1.8 17.8L.1 24l6.4-1.7a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.6z"/></svg><div><b>WhatsApp</b><small data-en="Message us directly">Escríbenos directo</small></div></a>
+        <div class="rv d3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><b data-en="Mon – Sun · 9AM – 10PM">Lun – Dom · 9AM – 10PM</b><small data-en="Walk-ins welcome">También sin cita</small></div></div>
+      </div>
+    </div>
+    <form id="bookForm" class="rv d2" novalidate>
+      <h3 data-en="Request appointment">Solicitar cita</h3>
+      <div class="field"><label for="fName" data-en="Name">Nombre</label><input id="fName" required autocomplete="name"></div>
+      <div class="field"><label for="fSvc" data-en="Service">Servicio</label><select id="fSvc"></select></div>
+      <div class="field"><label for="fDate" data-en="Date">Fecha</label><input id="fDate" type="date" required></div>
+      <div class="field"><label for="fTime" data-en="Time">Hora</label><select id="fTime"></select></div>
+      <div class="field full"><label for="fBarber" data-en="Barber (optional)">Barbero (opcional)</label><input id="fBarber" placeholder="Ej. Mario" data-en-ph="E.g. Mario"></div>
+      <div class="field full"><label for="fNote" data-en="Notes">Notas</label><textarea id="fNote" rows="2" placeholder="Estilo, referencias, etc." data-en-ph="Style, references, etc."></textarea></div>
+      <button class="btn btn-green" type="submit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.4zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm8.4-18.2A11.8 11.8 0 0 0 1.8 17.8L.1 24l6.4-1.7a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.6z"/></svg><span data-en="Send via WhatsApp">Enviar por WhatsApp</span></button>
+      <p class="form-note" data-en="Your appointment is confirmed once the shop replies.">Tu cita queda confirmada cuando la barbería te responda.</p>
+    </form>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="loc" id="ubicacion">
+  <div class="wrap rv">
+    <div class="map">
+      <div class="map-pin">📍 Plaza Norte · TJ</div>
+      <iframe title="Mapa de West Barber Shop" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=West%20Barbershop%2C%20Plaza%20Norte%2C%20Calle%201ra%20y%20Av%20Ni%C3%B1os%20H%C3%A9roes%2C%20Tijuana&amp;z=17&amp;output=embed"></iframe>
+    </div>
+    <div class="loc-info">
+      <span class="status" id="status"><i></i><span></span></span>
+      <h3 data-en="Find us">Encuéntranos</h3>
+      <address>Plaza Norte, Calle 1ra esq. Av. Niños Héroes<br><span data-en="Units 15 &amp; 16">Locales 15 y 16</span>, 22000 Tijuana, B.C.</address>
+      <table class="hours" id="hours"></table>
+      <div class="tags"><span data-en="LGBTQ+ friendly">Amigable con LGBTQ+</span><span data-en="English spoken">Se habla inglés</span><span>Walk-ins</span></div>
+      <a class="btn btn-gold" style="width:100%;justify-content:center" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&amp;destination=West+Barbershop+Plaza+Norte+Tijuana"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 11 19-9-9 19-2-8-8-2z"/></svg><span data-en="Get directions">Cómo llegar</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="pole-stripe"></div>
+<footer>
+  <div class="wrap">
+    <img src="assets/logo.webp" alt="West Barber Shop" loading="lazy">
+    <p class="thanks">¡Gracias por su preferencia!</p>
+    <p>Thank you for your preference!</p>
+    <div class="foot-bot">
+      <span>© <span id="yr"></span> West Barber Shop · Tijuana, B.C.</span>
+      <span><span data-en="Website by">Sitio web por</span> <a href="#">Línea Frontera</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" target="_blank" rel="noopener" href="https://wa.me/526648482494" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.4zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zm8.4-18.2A11.8 11.8 0 0 0 1.8 17.8L.1 24l6.4-1.7a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.6z"/></svg></a>
+
+<script>
+(() => {
+  const WA = '526648482494';
+  const TZ = 'America/Tijuana';
+  const OPEN = 9, CLOSE = 22;
+  let lang = 'es', cur = 'mxn';
+
+  const SERVICES = [
+    {es:'Corte clásico',en:'Classic cut',usd:13,mxn:200,tag:{es:'Popular',en:'Popular'}},
+    {es:'Corte desvanecido',en:'Skin fade',usd:16,mxn:250,tag:{es:'Top',en:'Top'}},
+    {es:'Barba',en:'Beard trim',usd:13,mxn:200},
+    {es:'Afeitado completo',en:'Hot towel shave',usd:6,mxn:100},
+    {es:'Ceja',en:'Eyebrow grooming',usd:3,mxn:50},
+    {es:'Bigote',en:'Mustache trim',usd:3,mxn:50},
+    {es:'Tinte (barba o cabello)',en:'Color (beard or hair)',usd:16,mxn:250},
+    {es:'Lavado y secado',en:'Shampoo & style',usd:6,mxn:100},
+    {es:'Exfoliación',en:'Exfoliation',usd:9,mxn:150},
+    {es:'Mascarilla',en:'Facial mask',usd:6,mxn:100},
+    {es:'Pigmentación',en:'Beard tinting',usd:9,mxn:150},
+    {es:'Cera (nariz, oídos)',en:'Waxing (nose, ears)',usd:3,mxn:50},
+    {es:'Diseños',en:'Custom designs',usd:null,mxn:null}
+  ];
+  const DAYS = {es:['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'],en:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']};
+  const T = {
+    open:{es:'Abierto · cierra 10 PM',en:'Open · closes 10 PM'},
+    closed:{es:'Cerrado · abre 9 AM',en:'Closed · opens 9 AM'},
+    consult:{es:'Consultar',en:'Ask'},
+    need:{es:'Escribe tu nombre y la fecha 🙂',en:'Please add your name and date 🙂'},
+    msg:{es:(d)=>`Hola West Barber Shop 👋 Quiero agendar una cita.\n\n• Nombre: ${d.n}\n• Servicio: ${d.s}\n• Fecha: ${d.f}\n• Hora: ${d.h}${d.b?`\n• Barbero: ${d.b}`:''}${d.o?`\n• Notas: ${d.o}`:''}\n\n¿Tienen disponibilidad?`,
+         en:(d)=>`Hi West Barber Shop 👋 I'd like to book an appointment.\n\n• Name: ${d.n}\n• Service: ${d.s}\n• Date: ${d.f}\n• Time: ${d.h}${d.b?`\n• Barber: ${d.b}`:''}${d.o?`\n• Notes: ${d.o}`:''}\n\nDo you have availability?`}
+  };
+
+  // Tijuana time helpers
+  const tjNow = () => {
+    const p = new Intl.DateTimeFormat('en-US',{timeZone:TZ,weekday:'short',hour:'numeric',hour12:false,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+    const g = t => p.find(x=>x.type===t).value;
+    return {day:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(g('weekday')),hour:+g('hour')%24,date:`${g('year')}-${g('month')}-${g('day')}`};
+  };
+
+  // Services
+  const grid = document.getElementById('svcGrid');
+  function renderServices(){
+    grid.innerHTML = SERVICES.map(s=>{
+      const price = s.usd==null ? `<span style="font-size:1.3rem">${T.consult[lang]}</span>` : (cur==='mxn'?`$${s.mxn}<small>MXN</small>`:`$${s.usd}<small>USD</small>`);
+      const other = lang==='es'?s.en:s.es;
+      return `<div class="svc rv in"><div class="svc-name">${s[lang]}${s.tag?`<span class="svc-tag">${s.tag[lang]}</span>`:''}<small>${other}</small></div><span class="svc-dots"></span><div class="svc-price">${price}</div></div>`;
+    }).join('');
+    const sel = document.getElementById('fSvc');
+    const v = sel.selectedIndex;
+    sel.innerHTML = SERVICES.map(s=>`<option>${s[lang]}</option>`).join('');
+    sel.selectedIndex = v<0?0:v;
+  }
+  document.querySelectorAll('.cur button').forEach(b=>b.onclick=()=>{cur=b.dataset.cur;document.querySelectorAll('.cur button').forEach(x=>x.classList.toggle('on',x===b));renderServices()});
+
+  // Hours + status
+  function renderHours(){
+    const {day,hour} = tjNow();
+    const order=[1,2,3,4,5,6,0];
+    document.getElementById('hours').innerHTML = order.map(d=>`<tr class="${d===day?'today':''}"><td>${DAYS[lang][d]}</td><td>9:00 AM – 10:00 PM</td></tr>`).join('');
+    const open = hour>=OPEN && hour<CLOSE;
+    const st=document.getElementById('status');
+    st.className='status '+(open?'open':'closed');
+    st.querySelector('span').textContent = (open?T.open:T.closed)[lang];
+  }
+
+  // Time slots
+  const tSel=document.getElementById('fTime');
+  for(let h=OPEN;h<CLOSE;h++)for(const m of ['00','30']){const l=`${(h%12)||12}:${m} ${h<12?'AM':'PM'}`;tSel.insertAdjacentHTML('beforeend',`<option>${l}</option>`)}
+  const fDate=document.getElementById('fDate');
+  fDate.min = tjNow().date; fDate.value = tjNow().date;
+
+  // Booking -> WhatsApp
+  document.getElementById('bookForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    const d={n:fName.value.trim(),s:fSvc.value,f:fDate.value,h:tSel.value,b:fBarber.value.trim(),o:fNote.value.trim()};
+    if(!d.n||!d.f){alert(T.need[lang]);return}
+    const [y,m,dd]=d.f.split('-');
+    const dt=new Date(+y,+m-1,+dd);
+    d.f = dt.toLocaleDateString(lang==='es'?'es-MX':'en-US',{weekday:'long',day:'numeric',month:'long'});
+    window.open(`https://wa.me/${WA}?text=${encodeURIComponent(T.msg[lang](d))}`,'_blank');
+  });
+
+  // Exchange calc
+  const usd=document.getElementById('usd'),mxn=document.getElementById('mxn');
+  const calc=()=>{const v=Math.max(0,parseFloat(usd.value)||0);mxn.textContent=`$${(v*20).toLocaleString('es-MX')} MXN`};
+  usd.addEventListener('input',calc);calc();
+
+  // Loyalty card
+  const poleSVG='<svg viewBox="0 0 24 40"><defs><pattern id="ps" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><rect width="4" height="8" fill="#d4af5f"/><rect x="4" width="4" height="8" fill="#14140f"/></pattern></defs><circle cx="12" cy="4" r="3.5" fill="#f3dc9a"/><rect x="5" y="8" width="14" height="3" rx="1" fill="#d4af5f"/><rect x="7" y="11" width="10" height="18" fill="url(#ps)" stroke="#d4af5f"/><rect x="5" y="29" width="14" height="3" rx="1" fill="#d4af5f"/><circle cx="12" cy="35" r="2.5" fill="#f3dc9a"/></svg>';
+  const slots=document.getElementById('slots');
+  let stamps=0;
+  function renderSlots(){
+    slots.innerHTML='';
+    for(let i=0;i<8;i++){
+      const s=document.createElement('button');
+      s.type='button';
+      if(i===7){s.className='slot free'+(stamps>=7?' on':'');s.innerHTML=lang==='es'?'7º<br>CORTE<br>GRATIS':'7TH<br>CUT<br>FREE';s.setAttribute('aria-label','7');}
+      else{s.className='slot'+(i<stamps?' on':'');s.innerHTML=poleSVG;s.setAttribute('aria-label',`${i+1}`);}
+      s.onclick=()=>{stamps = stamps>=7?0:stamps+1; renderSlots()};
+      slots.appendChild(s);
+    }
+  }
+  // auto-stamp demo when visible
+  let demoDone=false;
+  new IntersectionObserver((en,o)=>{if(en[0].isIntersecting&&!demoDone){demoDone=true;o.disconnect();const t=setInterval(()=>{stamps++;renderSlots();if(stamps>=7)clearInterval(t)},380)}},{threshold:.5}).observe(document.getElementById('punch'));
+
+  // i18n
+  const i18nEls=[...document.querySelectorAll('[data-en]')];
+  i18nEls.forEach(el=>el.dataset.es=el.innerHTML);
+  const phEls=[...document.querySelectorAll('[data-en-ph]')];
+  phEls.forEach(el=>el.dataset.esPh=el.placeholder);
+  function setLang(l){
+    lang=l;document.documentElement.lang=l;
+    i18nEls.forEach(el=>el.innerHTML = l==='en'?el.dataset.en:el.dataset.es);
+    phEls.forEach(el=>el.placeholder = l==='en'?el.dataset.enPh:el.dataset.esPh);
+    document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
+    renderServices();renderHours();renderSlots();
+    try{localStorage.setItem('west-lang',l)}catch(e){}
+  }
+  document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+  let saved='es';try{saved=localStorage.getItem('west-lang')||(navigator.language||'es').slice(0,2)}catch(e){}
+  setLang(saved==='en'?'en':'es');
+  setInterval(renderHours,60000);
+
+  // Hero title split delays
+  document.querySelectorAll('#h1 > span, #h1 em span').forEach((s,i)=>s.style.animationDelay=`${.15+i*.12}s`);
+
+  // Marquee duplicate
+  const mq=document.getElementById('mq');mq.innerHTML+=mq.innerHTML;
+
+  // Reveal on scroll
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+  document.querySelectorAll('.rv:not(.in), #bars').forEach(el=>io.observe(el));
+
+  // Counters
+  const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);const el=e.target,to=+el.dataset.to,dec=+(el.dataset.dec||0),t0=performance.now();
+    const step=t=>{const k=Math.min(1,(t-t0)/1600),v=to*(1-Math.pow(1-k,3));el.textContent=v.toFixed(dec);if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step)}),{threshold:.6});
+  document.querySelectorAll('.count').forEach(el=>cio.observe(el));
+
+  // Nav
+  const nav=document.getElementById('nav'),links=document.getElementById('links');
+  const onScroll=()=>nav.classList.toggle('scrolled',scrollY>40);addEventListener('scroll',onScroll,{passive:true});onScroll();
+  document.getElementById('burger').onclick=()=>links.classList.toggle('open');
+  links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
